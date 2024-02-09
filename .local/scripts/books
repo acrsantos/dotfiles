@@ -1,0 +1,17 @@
+#!/usr/bin/env zsh
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~/Documents/Books/ -mindepth 1 -maxdepth 3 -type f | fzf --delimiter / --with-nth=6..)
+fi
+
+if [[ -z $selected ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+tmux_running=$(pgrep tmux)
+
+zathura $selected
+
