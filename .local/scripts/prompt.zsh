@@ -53,7 +53,7 @@ done
 
 local saved_prompt=$PROMPT
 local saved_rprompt=$RPROMPT
-PROMPT='%F{123}❱ %f'
+PROMPT='%F{118}❱ %f'
 RPROMPT=''
 zle .reset-prompt
 PROMPT=$saved_prompt
