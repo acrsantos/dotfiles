@@ -1,5 +1,3 @@
-# Explicitly installed packages
-
 alacritty
 amd-ucode
 auto-cpufreq
@@ -26,6 +24,7 @@ ffmpegthumbnailer
 firefox-developer-edition
 flameshot
 foliate
+fontforge
 fzf
 gimp
 git
@@ -44,6 +43,7 @@ intel-media-driver
 inter-font
 interception-tools
 inxi
+iperf
 iw
 iwd
 jetbrains-toolbox
@@ -135,6 +135,8 @@ ttf-nerd-fonts-symbols-common
 tumbler
 udiskie
 unzip
+usbutils
+vde2
 viewnior
 vim
 vulkan-intel
