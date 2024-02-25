@@ -12,6 +12,5 @@ udiskie &
 nitrogen --restore &
 
 exec picom &
-exec slstatus 
-
+exec slstatus &
 xset r rate 200 50
