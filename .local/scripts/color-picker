@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+COLOR=$(hyprpicker)
+wl-copy "$COLOR"
+dunstify "$COLOR"

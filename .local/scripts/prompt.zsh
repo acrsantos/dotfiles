@@ -27,7 +27,8 @@ local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
 local current_dir="%B%F{123}%~%f%b"
 local git_branch='$GITSTATUS_PROMPT'
 
-source ~/Downloads/git/gitstatus/gitstatus.prompt.zsh
+source ~/Downloads/gistatus/gitstatus.prompt.zsh
+#source $HOME/Downloads/gistatus/gitstatus.plugin.zsh
 # PROMPT="╭─ %T | ${user_host}: [${current_dir}] \$(ruby_prompt_info) ${git_branch}
 # ╰──$PR_PROMPT "
 PROMPT="╭─ ${user_host} [${current_dir}] \$(ruby_prompt_info) ${git_branch}

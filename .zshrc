@@ -1,5 +1,3 @@
-xset r rate 200 50
-
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
@@ -35,6 +33,8 @@ zle -N zle-line-init
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+source ~/.config/zshrc.d/dots-hyprland.zsh
 
 # FZF
 #https://vitormv.github.io/fzf-themes#eyJjb2xvcnMiOiJmZys6I2ZmZmZmZixiZys6IzE0MTYxYixobDojNWY4N2FmLGhsKzojNWVkYWZmLGluZm86I2IyZmZhMixtYXJrZXI6IzdhYmEzOSxwcm9tcHQ6IzI2YmFkMSxzcGlubmVyOiNiNzE0MWUscG9pbnRlcjojZmVlOTJlLGhlYWRlcjojODdhZmIwLGJvcmRlcjojMDBmZmY3LGxhYmVsOiNhZWFlYWUscXVlcnk6I2Q5ZDlkOSJ9

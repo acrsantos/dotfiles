@@ -15,7 +15,7 @@ export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 export PATH="$PATH:/home/adrian/.local/share/JetBrains/Toolbox/scripts"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  exec Hyprland
 fi
 
 
