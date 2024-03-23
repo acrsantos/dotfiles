@@ -1,6 +1,7 @@
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k"
 DISABLE_AUTO_TITLE="true"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
@@ -15,7 +16,7 @@ alias prj=". project"
 alias lg="lazygit"
 alias bks=". books"
 alias cfg="cd ~/dotfiles/ && nvim ."
-alias gco="git switch \$(git branch | fzf)"
+alias gco="git switch \$(git branch -a | fzf)"
 alias gco!="git checkout -b"
 alias vim="nvim"
 alias kvim="NVIM_APPNAME=kvim nvim"
@@ -45,3 +46,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
   --color=border:#00fff7,label:#aeaeae,query:#d9d9d9
   --border="rounded" --border-label="" --preview-window="border-rounded" --prompt="> "
   --marker=">" --pointer="◆" --separator="─" --scrollbar="│"'
+
+
+# eval "$(starship init zsh)"
+
