@@ -31,7 +31,7 @@ source ~/Downloads/gistatus/gitstatus.prompt.zsh
 #source $HOME/Downloads/gistatus/gitstatus.plugin.zsh
 # PROMPT="╭─ %T | ${user_host}: [${current_dir}] \$(ruby_prompt_info) ${git_branch}
 # ╰──$PR_PROMPT "
-PROMPT="╭─ ${user_host} [${current_dir}] \$(ruby_prompt_info) ${git_branch}
+PROMPT="╭─ (${user_host}) - [${current_dir}] \$(ruby_prompt_info) ${git_branch}
 ╰─$PR_PROMPT "
 RPROMPT="${return_code}"
 

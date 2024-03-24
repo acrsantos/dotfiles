@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-selected=$(fd --max-depth 2 --type d -E '{build,src,.cache,.git,.github}' . "$HOME/dev" | fzf --delimiter / --with-nth=5.. --preview 'eza --long --tree --level=2 {}' | sed 's/\/$//')
+selected=$(fd --max-depth 1 --type d -E '{build,src,.cache,.git,.github}' . "$HOME/dev" | fzf --delimiter / --with-nth=5.. --preview 'eza --long --tree --level=2 {}' | sed 's/\/$//')
 
 if [[ -z $selected ]]; then
     exit 0
@@ -15,14 +15,14 @@ if [[ -f "$selected/CMakeLists.txt" ]] && [[ -d "$selected/build" ]]; then
 fi
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -ds $selected_name -c $selected -n "Project"
+    tmux new-session -ds $selected_name -c $selected -n "Source"
     [[ -n $build_type ]] && tmux new-window -t $selected_name: -n "Build" -c $build_type -d
     tmux attach-session -t $selected_name
     exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected -n "Project"
+    tmux new-session -ds $selected_name -c $selected -n "Source"
     [[ -n $build_type ]] && tmux new-window -t $selected_name: -n "Build" -c $build_type -d
 fi
 

@@ -76,7 +76,7 @@ const options = mkOptions(OPTIONS, {
                 "date",
             ]),
             end: opt<BarWidget[]>([
-                "media",
+                // "media",
                 "expander",
                 "systray",
                 // "colorpicker",
