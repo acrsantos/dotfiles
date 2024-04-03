@@ -6,11 +6,13 @@ local PR_USER PR_USER_OP PR_PROMPT PR_HOST
 if [[ $UID -ne 0 ]]; then # normal user
   PR_USER='%F{123}%n%f'
   PR_USER_OP='%F{white}%#%f'
-  PR_PROMPT='%F{123}❱ %f'
+  PR_PROMPT='%F{123}❱%f'
+  # PR_PROMPT='%F{123}$%f'
 else # root
   PR_USER='%F{red}%n%f'
   PR_USER_OP='%F{red}%#%f'
-  PR_PROMPT='%F{red}❯ %f'
+  # PR_PROMPT='%F{red}❯ %f'
+  PR_PROMPT='%F{red}#%f'
 fi
 
 # Check if we are on SSH or not
@@ -31,8 +33,10 @@ source ~/Downloads/gistatus/gitstatus.prompt.zsh
 #source $HOME/Downloads/gistatus/gitstatus.plugin.zsh
 # PROMPT="╭─ %T | ${user_host}: [${current_dir}] \$(ruby_prompt_info) ${git_branch}
 # ╰──$PR_PROMPT "
-PROMPT="╭─ (${user_host}) - [${current_dir}] \$(ruby_prompt_info) ${git_branch}
+PROMPT="╭─(${user_host}) - [${current_dir}] \$(ruby_prompt_info) ${git_branch}
 ╰─$PR_PROMPT "
+# PROMPT="${user_host} [${current_dir}] \$(ruby_prompt_info) ${git_branch}
+# $PR_PROMPT "
 RPROMPT="${return_code}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}‹"
