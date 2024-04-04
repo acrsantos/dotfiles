@@ -21,6 +21,7 @@ alias gco!="git checkout -b"
 alias vim="nvim"
 alias kvim="NVIM_APPNAME=kvim nvim"
 alias clangf="clang-format -style='{BasedOnStyle: LLVM, IndentWidth: 4}' -dump-config > .clang-format"
+alias dm="dmenu_run"
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
@@ -38,3 +39,9 @@ zle -N zle-line-init
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+# attach tmux session named "main", or create it if it doesn't exist
+if [ -z "$TMUX" ]; then
+    tmux attach-session -t main || tmux new-session -s main zsh
+fi
+
