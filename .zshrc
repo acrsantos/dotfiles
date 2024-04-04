@@ -39,9 +39,3 @@ zle -N zle-line-init
 
 # Zoxide
 eval "$(zoxide init zsh)"
-
-# attach tmux session named "main", or create it if it doesn't exist
-if [ -z "$TMUX" ]; then
-    tmux attach-session -t main || tmux new-session -s main zsh
-fi
-
