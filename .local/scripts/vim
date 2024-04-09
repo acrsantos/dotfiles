@@ -1,0 +1,7 @@
+#!/usr/bin/zsh
+
+if [ -z "$1" ]; then
+    nvim .
+else
+    nvim $@
+fi

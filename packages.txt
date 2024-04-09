@@ -16,6 +16,7 @@ cliphist
 clipmenu
 cmake
 discord
+docker
 dunst
 dust
 edk2-shell
@@ -64,6 +65,7 @@ man-pages
 mesa-utils
 meson
 microsoft-edge-stable-bin
+mpd
 mpv
 neofetch
 neovim
