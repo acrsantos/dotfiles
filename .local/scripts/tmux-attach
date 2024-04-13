@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+sessions=$(tmux list-sessions -F "#S")
+
+if [ $(echo "$sessions" | wc -l) -eq 1 ]; then
+    tmux attach-session -t "$sessions"
+else
+    selected_session=$(echo "$sessions" | fzf)
+    tmux attach-session -t "$selected_session"
+fi
+

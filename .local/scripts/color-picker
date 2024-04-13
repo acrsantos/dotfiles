@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 
 COLOR=$(xcolor)
-wl-copy "$COLOR"
+echo "$COLOR" | xclip -sel clip
 dunstify "$COLOR"

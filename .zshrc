@@ -20,8 +20,8 @@ alias gco="git switch \$(git branch -a | fzf)"
 alias gco!="git checkout -b"
 alias nvim="$HOME/.local/scripts/vim"
 alias vim="$HOME/.local/scripts/vim"
+alias ta="tmux-attach"
 alias clangf="clang-format -style='{BasedOnStyle: LLVM, IndentWidth: 4}' -dump-config > .clang-format"
-alias dm="dmenu_run"
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh

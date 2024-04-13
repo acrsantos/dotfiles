@@ -13,12 +13,12 @@
 
     width = (400,500)
 
-    frame_color = "#1798bc"
+    frame_color = "#005577"
     separator_color = frame
 
     sort = yes
     idle_threshold = 120
-    font = monospace 10
+    font = "BerkeleyMono Nerd Font 10"
     line_height = 0
     markup = full
     alignment = left
@@ -45,16 +45,16 @@
     timeout = 5
 
 [urgency_low]
-    background = "#0b0f10"
+    background = "#222222"
     foreground = "#e4e4e4"
     transparency = 0
 
 [urgency_normal]
-    background = "#0b0f10"
+    background = "#222222"
     foreground = "#e4e4e4"
     transparency = 0
 
 [urgency_critical]
-    background = "#0b0f10"
+    background = "#222222"
     foreground = "#e4e4e4"
     frame_color = "#b7141e"
