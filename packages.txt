@@ -47,6 +47,7 @@ inxi
 iperf
 iw
 iwd
+j4-dmenu-desktop
 kitty
 lazygit
 lf

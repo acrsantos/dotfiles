@@ -41,7 +41,7 @@
     title = Dunst
     class = Dunst
 
-    corner_radius = 3
+    corner_radius = 0
     timeout = 5
 
 [urgency_low]
