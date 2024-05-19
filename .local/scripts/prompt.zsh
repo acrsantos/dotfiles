@@ -26,23 +26,19 @@ fi
 local return_code="%(?..%F{red}%? ↵%f)"
 
 local user_host="${PR_USER}%F{cyan}@${PR_HOST}"
-local current_dir="%B%F{123}%~%f%b"
+local current_dir="%B%F{244}%~%f%b"
 local git_branch='$GITSTATUS_PROMPT'
 
-source ~/Downloads/gistatus/gitstatus.prompt.zsh
-#source $HOME/Downloads/gistatus/gitstatus.plugin.zsh
-# PROMPT="╭─ %T | ${user_host}: [${current_dir}] \$(ruby_prompt_info) ${git_branch}
-# ╰──$PR_PROMPT "
-PROMPT="╭─(${user_host}) - [${current_dir}] \$(ruby_prompt_info) ${git_branch}
+source $HOME/Downloads/gistatus/gitstatus.prompt.zsh
+if [[ -z $git_branch ]]; then
+PROMPT="╭─ ${user_host}: ${current_dir}
 ╰─$PR_PROMPT "
-# PROMPT="${user_host} [${current_dir}] \$(ruby_prompt_info) ${git_branch}
-# $PR_PROMPT "
+else
+PROMPT="╭─[${user_host}: ${current_dir}] %F{015} ${git_branch}
+╰─$PR_PROMPT "
+fi
 RPROMPT="${return_code}"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%F{yellow}‹"
-ZSH_THEME_GIT_PROMPT_SUFFIX="› %f"
-ZSH_THEME_RUBY_PROMPT_PREFIX="%F{red}‹"
-ZSH_THEME_RUBY_PROMPT_SUFFIX="›%f"
 
 export zle-line-init() {
 emulate -L zsh
