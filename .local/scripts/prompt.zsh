@@ -30,13 +30,8 @@ local current_dir="%B%F{244}%~%f%b"
 local git_branch='$GITSTATUS_PROMPT'
 
 source $HOME/Downloads/gistatus/gitstatus.prompt.zsh
-if [[ -z $git_branch ]]; then
-PROMPT="╭─ ${user_host}: ${current_dir}
+PROMPT="╭─[${user_host}: ${current_dir}] ${git_branch}
 ╰─$PR_PROMPT "
-else
-PROMPT="╭─[${user_host}: ${current_dir}] %F{015} ${git_branch}
-╰─$PR_PROMPT "
-fi
 RPROMPT="${return_code}"
 
 

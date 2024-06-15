@@ -1,0 +1,9 @@
+#!/usr/bin/zsh
+
+if [[ $# -eq 1 ]]; then
+    git checkout -b $1 master
+elif [[ $# -eq 2 ]]; then
+    git checkout -b $1 $2
+else
+    echo "Usage: git-create-branch <name> <start-point>"
+fi
