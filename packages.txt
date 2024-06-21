@@ -1,5 +1,7 @@
+adw-gtk3-git
 amd-ucode
 arch-wiki-docs
+ark
 auto-cpufreq
 base
 base-devel
@@ -7,6 +9,7 @@ bat
 blueberry
 bluez
 bluez-utils
+breeze
 breeze-gtk
 brightnessctl
 btop
@@ -30,12 +33,11 @@ flameshot
 flatpak
 foliate
 fontforge
+fuse2fs
 fzf
 gimp
 git
 github-cli
-gnome-bluetooth-3.0
-gnome-control-center
 gnome-keyring
 google-chrome
 gst-plugin-pipewire
@@ -48,7 +50,10 @@ iperf
 iw
 iwd
 j4-dmenu-desktop
+jdk-openjdk
 kitty
+kvantum
+kvantum-qt5
 lazygit
 lf
 libpulse
@@ -104,13 +109,17 @@ polkit-gnome
 python-requests
 qbittorrent
 qt5-graphicaleffects
+qt5ct
 qt6-doc
 qt6-tools
+qt6ct
 redshift
 ripgrep
 rofi
 silicon
+smartmontools
 sof-firmware
+squashfuse
 stow
 thunar
 thunar-archive-plugin
@@ -138,6 +147,7 @@ wlogout
 xclip
 xcolor
 xdg-desktop-portal-gtk
+xdg-utils
 xed
 xf86-video-amdgpu
 xf86-video-ati
