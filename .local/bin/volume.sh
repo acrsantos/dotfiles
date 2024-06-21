@@ -4,9 +4,9 @@ vol=$(pamixer --get-volume)
 volStatus=$(pamixer --get-volume-human)
 
 if [ "$volStatus" = "muted" ]; then
-	icon="󰖁"
+	icon="^c#FEE56C^󰖁^c#FFFFFF^"
 else
-	icon="󰕾"
+	icon="^c#FEE56C^VOL^c#FFFFFF^"
 fi
 
 printf "%s %s%%" "$icon" "$vol"
