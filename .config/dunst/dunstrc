@@ -13,7 +13,7 @@
 
     width = (400,500)
 
-    frame_color = "#10A793"
+    frame_color = "#005577"
     separator_color = frame
 
     sort = yes
