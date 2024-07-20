@@ -56,6 +56,8 @@ kvantum
 kvantum-qt5
 lazygit
 lf
+libconfig
+libev
 libpulse
 libreoffice-still
 libva-intel-driver
