@@ -1,0 +1,28 @@
+[colors.primary]
+foreground = "#f7f7f8"
+background = "#1b1b1b"
+
+[colors.normal]
+black =   "#073642"
+red =     "#F82871"
+green =   "#10a793"
+yellow =  "#fee56c"
+blue =    "#268bd2"
+magenta = "#c74cec"
+cyan =    "#08e7c5"
+white =   "#eee8d5"
+
+
+[colors.bright]
+black =   "#002b36"
+red =     "#8e0f3a"
+green =   "#96df71"
+yellow =  "#f29c14"
+blue =    "#315f70"
+magenta = "#6c71c4"
+cyan =    "#a9f4e1"
+white =   "#fdf6e3"
+
+[font]
+normal = { family = "Berkeley Mono Nerd Font", style = "Regular" }
+size = 8
