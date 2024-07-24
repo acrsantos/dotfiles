@@ -1,6 +1,8 @@
 #!/usr/bin/env zsh
 
-selected=$(fd --max-depth 1 --type d -E '{build,src,.cache,.git,.github}' . "$HOME/dev" | fzf --delimiter / --with-nth=5.. --preview 'eza --long --tree --level=2 {}' | sed 's/\/$//')
+dir=$(fd --max-depth 1 --type d -E '{build,src,.cache,.git,.github}' . "$HOME/dev")
+dir+="\n"$(cat "$HOME/.tmux-dir")
+selected=$(echo $dir | fzf --delimiter / --with-nth=4.. --preview 'eza --long --tree --level=2 {}' | sed 's/\/$//')
 
 if [[ -z $selected ]]; then
     exit 0
@@ -9,21 +11,14 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-if [[ -f "$selected/CMakeLists.txt" ]] && [[ -d "$selected/build" ]]; then
-        build_type=$(fd --type d --max-depth 1 . "$selected/build" | fzf --delimiter / --with-nth=7.. --preview 'eza --long --tree --level=2 {}')
-        build_type_name=$(basename "$build_type" | tr . _)
-fi
-
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -ds $selected_name -c $selected -n "Source"
-    [[ -n $build_type ]] && tmux new-window -t $selected_name: -n "Build" -c $build_type -d
     tmux attach-session -t $selected_name
     exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
     tmux new-session -ds $selected_name -c $selected -n "Source"
-    [[ -n $build_type ]] && tmux new-window -t $selected_name: -n "Build" -c $build_type -d
 fi
 
 [[ -z $TMUX ]] && tmux attach-session -t $selected_name || tmux switch-client -t $selected_name

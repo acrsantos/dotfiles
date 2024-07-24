@@ -1,14 +1,14 @@
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel10k"
-DISABLE_AUTO_TITLE="true"
+ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# DISABLE_AUTO_TITLE="true"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 
 # Prompt
-source $HOME/.local/scripts/prompt.zsh
+# source $HOME/.local/scripts/prompt.zsh
 
 # Alias
 alias tms="tmux-sessionizer"
@@ -20,6 +20,8 @@ alias gco="git switch \$(git branch -a | fzf)"
 alias gcb="git-create-branch"
 alias vim="nvim"
 alias ta="tmux-attach"
+alias tta="tmux-dir add"
+alias ttr="tmux-dir remove"
 alias clangf="clang-format -style='{BasedOnStyle: LLVM, IndentWidth: 4}' -dump-config > .clang-format"
 
 # FZF
@@ -34,7 +36,10 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 '
 
 # Transient Prompt
-zle -N zle-line-init
+# zle -N zle-line-init
 
 # Zoxide
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

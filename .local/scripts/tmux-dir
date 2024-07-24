@@ -1,0 +1,30 @@
+#!/usr/bin/zsh
+
+if [[ $# -lt 2 ]]; then
+    echo "Usage: tmux-dir <operation> <dir>"
+    exit
+fi
+
+operation=$1
+dir=$2
+dir_list_file=$HOME/.tmux-dir
+
+if [[ ! -d $dir ]]; then
+    echo "Directory $dir does not exist."
+    exit
+fi
+
+if [[ $operation != "add" ]] &&  [[ $operation != "remove" ]]; then
+    echo "Operation must be either \"add\" or \"remove\""
+    exit
+fi
+
+if [[ $operation = "add" ]]; then
+    if ! grep -Fxq "$dir" $dir_list_file; then
+        echo $dir >> $dir_list_file
+    else
+        echo "Directory already exists in the list."
+    fi
+else
+    sed -i "\|^$dir$|d" "$dir_list_file"
+fi
