@@ -14,11 +14,23 @@ function OnScreenProgress(vertical: boolean) {
         size: 42,
         vpack: "start",
     })
+    const label = Widget.Label({
+        justification: "center",
+        vpack: "start",
+        truncate: "end",
+        xalign: 5,
+    })
     const progress = Progress({
         vertical,
         width: vertical ? 42 : 300,
         height: vertical ? 300 : 42,
-        child: indicator,
+        child: Widget.Box({
+            vertical: true,
+            children: [
+                label,
+                indicator,
+            ],
+        }),
     })
 
     const revealer = Widget.Revealer({
@@ -29,6 +41,7 @@ function OnScreenProgress(vertical: boolean) {
     let count = 0
     function show(value: number, icon: string) {
         revealer.reveal_child = true
+        label.label = `${Math.floor(value * 100)}`
         indicator.icon = icon
         progress.setValue(value)
         count++
@@ -51,7 +64,8 @@ function OnScreenProgress(vertical: boolean) {
         ), "notify::kbd")
         .hook(audio.speaker, () => show(
             audio.speaker.volume,
-            icon(audio.speaker.icon_name || "", icons.audio.type.speaker),
+            // icon(audio.speaker.icon_name || "", icons.audio.type.speaker),
+            icon("", icons.audio.type.speaker),
         ), "notify::volume")
 }
 
