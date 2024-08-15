@@ -59,10 +59,10 @@ const Settings = () => Widget.Box({
             [DarkModeToggle],
         ),
         Row([MicMute, DND]),
-        // Widget.Box({
-        //     visible: media.as(l => l.length > 0),
-        //     child: Media(),
-        // }),
+        Widget.Box({
+            visible: media.as(l => l.length > 0),
+            child: Media(),
+        }),
     ],
 })
 

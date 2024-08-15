@@ -1,4 +1,4 @@
-adw-gtk3-git
+adw-gtk-theme
 amd-ucode
 arch-wiki-docs
 ark
@@ -13,7 +13,6 @@ breeze
 breeze-gtk
 brightnessctl
 btop
-captive-browser-git
 clang
 cliphist
 clipmenu
@@ -22,7 +21,6 @@ discord
 docker
 dunst
 dust
-edk2-shell
 efibootmgr
 eza
 fastfetch
@@ -31,7 +29,6 @@ ffmpegthumbnailer
 firefox
 flameshot
 flatpak
-foliate
 fontforge
 fuse2fs
 fzf
@@ -72,7 +69,6 @@ man-db
 man-pages
 mesa-utils
 meson
-microsoft-edge-stable-bin
 mpd
 mpv
 neofetch
@@ -109,7 +105,6 @@ pipewire-pulse
 playerctl
 polkit-gnome
 python-requests
-qbittorrent
 qt5-graphicaleffects
 qt5ct
 qt6-doc
@@ -123,8 +118,6 @@ smartmontools
 sof-firmware
 squashfuse
 stow
-thunar
-thunar-archive-plugin
 tmux
 tokei
 tree
@@ -145,7 +138,6 @@ wget
 wireplumber
 wireless_tools
 wl-clipboard
-wlogout
 xclip
 xcolor
 xdg-desktop-portal-gtk
@@ -164,7 +156,7 @@ xorg-xsetroot
 xsel
 yt-dlp
 zathura
-zathura-pdf-poppler
+zathura-pdf-mupdf
 zip
 zoxide
 zram-generator

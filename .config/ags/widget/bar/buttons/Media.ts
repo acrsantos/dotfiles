@@ -23,9 +23,9 @@ const Content = (player: MprisPlayer) => {
 
                 current = player.track_title
                 self.reveal_child = true
-                Utils.timeout(3000, () => {
-                    !self.is_destroyed && (self.reveal_child = false)
-                })
+                // Utils.timeout(3000, () => {
+                //     !self.is_destroyed && (self.reveal_child = false)
+                // })
             })
         },
         child: Widget.Label({

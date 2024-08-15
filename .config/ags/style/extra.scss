@@ -22,7 +22,7 @@ window.popup {
     }
 
     menu {
-        border-radius: $popover-radius;
+        border-radius: 0;
         background-color: $bg;
         padding: $popover-padding;
         border: $border-width solid $popover-border-color;

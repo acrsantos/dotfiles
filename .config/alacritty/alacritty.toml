@@ -1,7 +1,7 @@
 import = [
   # "~/.config/alacritty/catppuccin-latte.toml",
-  # "~/.config/alacritty/andromeda.toml",
-  "~/.config/alacritty/github-light.toml",
+  "~/.config/alacritty/andromeda.toml",
+  # "~/.config/alacritty/github-light.toml",
 ]
 
 [env]
@@ -13,10 +13,7 @@ program = "/bin/zsh"
 
 [font]
 normal = { family = "Berkeley Mono Nerd Font", style = "Regular" }
-size = 15
+size = 10
 
 [window]
 startup_mode = "Maximized"
-
-# Colors
-

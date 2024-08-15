@@ -27,13 +27,9 @@ alias clangf="clang-format -style='{BasedOnStyle: LLVM, IndentWidth: 4}' -dump-c
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_DEFAULT_OPTS='--height 100% --layout=reverse-list --border double'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color dark,hl:33,hl+:37,fg+:235,bg+:136,fg+:254
-    --color info:254,prompt:37,spinner:108,pointer:235,marker:235
-'
 
 # Transient Prompt
 # zle -N zle-line-init
@@ -43,3 +39,4 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+eval "$(starship init zsh)"
