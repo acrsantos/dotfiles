@@ -1,7 +1,7 @@
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # DISABLE_AUTO_TITLE="true"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Prompt
 # source $HOME/.local/scripts/prompt.zsh
+source /home/adrian/.local/scripts/transient-prompt.zsh
 
 # Alias
 alias tms="tmux-sessionizer"
@@ -32,11 +33,11 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --e
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 # Transient Prompt
-# zle -N zle-line-init
+zle -N zle-line-init
 
 # Zoxide
 # eval "$(zoxide init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(starship init zsh)"
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# eval "$(starship init zsh)"
