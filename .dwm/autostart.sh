@@ -10,10 +10,10 @@ udiskie &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 # Wallpaper
 nitrogen --restore &
+monitor.sh
 
 # exec picom &
 exec slstatus &
 xset r rate 200 50
 nm-applet &
 clipmenud &
-picom &

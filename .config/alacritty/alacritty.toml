@@ -13,7 +13,7 @@ program = "/bin/zsh"
 
 [font]
 normal = { family = "Berkeley Mono Nerd Font", style = "Regular" }
-size = 10
+size = 15
 
 [window]
 startup_mode = "Maximized"
