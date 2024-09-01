@@ -60,7 +60,7 @@ export default ({
                 return
             }
 
-            const frames = options.transition.value / 10
+            const frames = 10
             const goal = preferred - fill_size
             const step = goal / frames
 
