@@ -16,4 +16,4 @@ monitor.sh
 exec slstatus &
 xset r rate 200 50
 nm-applet &
-clipmenud &
+# clipmenud &

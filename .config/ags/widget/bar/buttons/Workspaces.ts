@@ -15,8 +15,8 @@ const Workspaces = (ws: number) => Widget.Box({
         vpack: "center",
         label: `${i}`,
         setup: self => self.hook(hyprland, () => {
-            self.toggleClassName("active", hyprland.active.workspace.id === i)
             self.toggleClassName("occupied", (hyprland.getWorkspace(i)?.windows || 0) > 0)
+            self.toggleClassName("active", hyprland.active.workspace.id === i)
         }),
     })),
     setup: box => {
