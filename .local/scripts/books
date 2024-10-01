@@ -13,5 +13,6 @@ fi
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
 
-zathura $selected
+# zathura $selected
+okular $selected
 

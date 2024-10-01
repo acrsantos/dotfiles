@@ -17,3 +17,4 @@ size = 15
 
 [window]
 startup_mode = "Maximized"
+opacity = 1.0
