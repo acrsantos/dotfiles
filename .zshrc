@@ -18,12 +18,12 @@ alias lg="lazygit"
 alias bks=". books"
 alias cfg="cd ~/dotfiles/ && nvim ."
 alias gco="git switch \$(git branch -a | fzf)"
-alias gcb="git-create-branch"
 alias vim="nvim"
 alias ta="tmux-attach"
 alias tta="tmux-dir add"
 alias ttr="tmux-dir remove"
 alias clangf="clang-format -style='{BasedOnStyle: LLVM, IndentWidth: 4}' -dump-config > .clang-format"
+alias py="python"
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
