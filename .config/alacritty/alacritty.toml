@@ -1,13 +1,8 @@
-import = [
-  # "~/.config/alacritty/catppuccin-latte.toml",
-  "~/.config/alacritty/andromeda.toml",
-  # "~/.config/alacritty/github-light.toml",
-]
 
 [env]
 term = "xterm-256color"
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 
@@ -18,3 +13,12 @@ size = 15
 [window]
 startup_mode = "Maximized"
 opacity = 1.0
+
+[general]
+import = [
+  # "~/.config/alacritty/catppuccin-latte.toml",
+  "~/.config/alacritty/andromeda.toml",
+  # "~/.config/alacritty/github-light.toml",
+]
+
+[terminal]
