@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
@@ -32,8 +39,10 @@ export FZF_DEFAULT_OPTS='--height 100% --layout=reverse-list --border double'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
+export MANPAGER='nvim +Man!'
+
 # Transient Prompt
-zle -N zle-line-init
+# zle -N zle-line-init
 
 # Zoxide
 # eval "$(zoxide init zsh)"

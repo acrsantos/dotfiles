@@ -1,0 +1,134 @@
+{
+    "layer": "top",
+    "position": "right",
+    "spacing": 2,
+    "width": 20,
+    "margin": 4,
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "battery",
+        "network",
+        "pulseaudio",
+        "custom/power"
+    ],
+    "custom/arch": {
+        "format": "󰣇",
+        "on-click": "hyprlauncher",
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "fullscreen",
+        "icon-theme": "WhiteSur",
+        "icon-size": 25,
+        "tooltip-format": "{title}"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-icons": "󰀂",
+        "format-ethernet": "󰀂",
+        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{icon} {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "on-click": "~/.config/rofi/wifi/wifi.sh &",
+        "interval": 5,
+        "nospacing": 1
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": [
+                " "
+            ]
+        },
+        "on-click": "pamixer -t",
+        "scroll-step": 1
+    },
+    "battery": {
+        "format": "{icon}",
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
+        "format-full": "",
+        "tooltip-format": "{capacity}%",
+        "interval": 5,
+        "states": {
+            "warning": 30,
+            "critical": 20
+        },
+        "tooltip": true
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": [
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "tooltip": true,
+        //"tooltip-format": "Device: {desc}",
+        "tooltip-format": "Volume : {volume}%",
+        "on-click": "~/.config/waybar/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "~/.config/waybar/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.config/waybar/scripts/volumecontrol.sh -o d"
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "tooltip": false,
+        "on-click": "wlogout"
+    },
+    "clock": {
+        "format": "{:%I\n%M\n%p}",
+        "format-alt": "{:%a\n%b\n%d}"
+    }
+}

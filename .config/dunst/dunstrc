@@ -8,12 +8,15 @@
 
     separator_height = 2
 
-    padding = 8 horizontal_padding = 8 text_icon_padding = 0 frame_width = 2
+    padding = 15
+    horizontal_padding = 15
+    text_icon_padding = 0
+    frame_width = 3
     transparency = 0
 
     width = (400,500)
 
-    frame_color = "#005577"
+    frame_color = "#84C9F2"
     separator_color = frame
 
     sort = yes
@@ -41,20 +44,21 @@
     title = Dunst
     class = Dunst
 
-    corner_radius = 0
+    corner_radius = 4
     timeout = 5
 
 [urgency_low]
-    background = "#1b1b1b"
+    background = "#0F1417"
     foreground = "#eeeeee"
     transparency = 0
 
 [urgency_normal]
-    background = "#1b1b1b"
+    background = "#0F1417"
     foreground = "#eeeeee"
     transparency = 0
 
 [urgency_critical]
-    background = "#1b1b1b"
+    background = "#0F1417"
     foreground = "#eeeeee"
     frame_color = "#b7141e"
+    transparency = 0

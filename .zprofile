@@ -3,6 +3,8 @@ export VISUAL="nvim"
 
 export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.local/scripts/:$PATH"
+export PATH="$HOME/.config/emacs/bin/:$PATH"
+export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts/:$PATH"
 
 # NPM
 NPM_PACKAGES="${HOME}/.npm-packages"
