@@ -1,9 +1,8 @@
 {
     "layer": "top",
-    "position": "right",
+    "position": "top",
     "spacing": 2,
-    "width": 20,
-    "margin": 4,
+    "margin": 0,
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces"
@@ -13,15 +12,32 @@
     ],
     "modules-right": [
         "tray",
+        "cpu",
+        // "disk",
+        "memory",
         "battery",
-        "network",
         "pulseaudio",
         "custom/power"
     ],
-    "custom/arch": {
-        "format": "󰣇",
-        "on-click": "hyprlauncher",
-        "tooltip": false
+    "cpu": {
+        "interval": 5,
+        "format": " {usage}%",
+        "max-length": 10
+    },
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/",
+        "tooltip": true,
+        "unit": "GB",
+        "tooltip-format":  "Available {free} of {total}"
+    },
+    "memory": {
+        "interval": 5,
+        "format": " {percentage}%",
+        "max-length": 10,
+        "tooltip": true,
+        "tooltip-format": "RAM - {used:0.1f}GiB used"
     },
     "hyprland/workspaces": {
         "on-click": "activate",
@@ -70,31 +86,26 @@
         "scroll-step": 1
     },
     "battery": {
-        "format": "{icon}",
+        "format": "{icon}  {capacity}%",
         "format-icons": {
-            "charging": [
-                "󰢜",
-                "󰂆",
-                "󰂇",
-                "󰂈",
-                "󰢝",
-                "󰂉",
-                "󰢞",
-                "󰂊",
-                "󰂋",
-                "󰂅"
-            ],
+            // "charging": [
+            //     "󰢜",
+            //     "󰂆",
+            //     "󰂇",
+            //     "󰂈",
+            //     "󰢝",
+            //     "󰂉",
+            //     "󰢞",
+            //     "󰂊",
+            //     "󰂋",
+            //     "󰂅"
+            // ],
             "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
+                "",
+                "",
+                "",
+                "",
+                ""
             ]
         },
         "format-full": "",
@@ -107,7 +118,7 @@
         "tooltip": true
     },
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}",
         "format-muted": "󰝟",
         "format-icons": {
             "default": [
@@ -128,7 +139,11 @@
         "on-click": "wlogout"
     },
     "clock": {
-        "format": "{:%I\n%M\n%p}",
-        "format-alt": "{:%a\n%b\n%d}"
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%a %b %d}"
     }
+    // "clock": {
+    //     "format": "{:%I\n%M\n%p}",
+    //     "format-alt": "{:%a\n%b\n%d}"
+    // }
 }

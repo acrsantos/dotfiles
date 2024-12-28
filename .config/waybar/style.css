@@ -1,14 +1,12 @@
-@import url("../../.cache/wal/colors-waybar.css");
-
 * {
   border: none;
   min-height: 0;
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 14px;
+  font-family: BerkeleyMono Nerd Font;
+  font-size: 12px;
 }
 
 window#waybar {
-  background-color: @background;
+  background-color: #111111;
   margin: 4px;
   padding: 0 2px;
   border-radius: 5px;
@@ -19,7 +17,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: @background;
+  background-color: #111111;
   margin: 0 2px 0 2px;
   padding: 2px;
   border-radius: 5px;
@@ -65,7 +63,7 @@ window#waybar.hidden {
 #custom-arch {
   margin: 0 2px 0 0;
   padding: 4px 8px;
-  background-color: @background;
+  background-color: #111111;
   color: #ffffff;
   border-radius: 5px;
 }
@@ -73,13 +71,16 @@ window#waybar.hidden {
 #custom-updates,
 #battery,
 #backlight,
-#wireplumber,
+#pulseaudio,
+#cpu,
+#disk,
+#memory,
 #clock,
 #tray,
 #window {
   margin: 0 2px;
-  padding: 4px 8px;
-  background-color: @background;
+  padding: 4px 10px;
+  background-color: #111111;
   color: #ffffff;
   border-radius: 5px;
 }
@@ -88,7 +89,7 @@ window#waybar.hidden {
 #custom-power {
   margin: 0 2px;
   padding: 4px 8px;
-  background-color: @background;
+  background-color: #111111;
   color: #ffffff;
   border-radius: 5px;
 }
@@ -96,7 +97,7 @@ window#waybar.hidden {
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  background-color: @background;
+  background-color: #111111;
   color: #ff0000;
 }
 
@@ -105,7 +106,7 @@ window#waybar.hidden {
 }
 
 tooltip {
-  background-color: @background;
+  background-color: #111111;
 }
 
 tooltip label {
@@ -116,9 +117,8 @@ tooltip label {
 #clock {
   margin: 0 2px;
   padding: 2px 4px;
-  background-color: @background;
+  background-color: #111111;
   color: #ffffff;
   border-radius: 5px;
-  font-size: 12px;
   font-weight: bold;
 }
