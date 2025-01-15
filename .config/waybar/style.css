@@ -6,10 +6,11 @@
 }
 
 window#waybar {
-  background-color: #111111;
+  background-color: rgba(17, 17, 17, 0.6);
   margin: 4px;
   padding: 0 2px;
   border-radius: 5px;
+  border: 0px
 }
 
 window#waybar.hidden {
@@ -17,10 +18,11 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: #111111;
+  /* background-color: #111111; */
   margin: 0 2px 0 2px;
   padding: 2px;
   border-radius: 5px;
+  background-color: rgba(17, 17, 17, 0);
 }
 
 #workspaces button {
@@ -31,6 +33,7 @@ window#waybar.hidden {
   margin: 2px;
   color: #ffffff;
   border-radius: 5px;
+  background-color: rgba(17, 17, 17, 0);
 }
 
 #workspaces button:hover {
@@ -75,12 +78,12 @@ window#waybar.hidden {
 #cpu,
 #disk,
 #memory,
-#clock,
 #tray,
 #window {
   margin: 0 2px;
   padding: 4px 10px;
   background-color: #111111;
+  background-color: rgba(17, 17, 17, 0);
   color: #ffffff;
   border-radius: 5px;
 }
@@ -88,8 +91,7 @@ window#waybar.hidden {
 #network,
 #custom-power {
   margin: 0 2px;
-  padding: 4px 8px;
-  background-color: #111111;
+  padding: 4px 15px 4px 5px;
   color: #ffffff;
   border-radius: 5px;
 }
@@ -97,7 +99,6 @@ window#waybar.hidden {
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  background-color: #111111;
   color: #ff0000;
 }
 
@@ -117,7 +118,7 @@ tooltip label {
 #clock {
   margin: 0 2px;
   padding: 2px 4px;
-  background-color: #111111;
+  background-color: rgba(17, 17, 17, 0);
   color: #ffffff;
   border-radius: 5px;
   font-weight: bold;

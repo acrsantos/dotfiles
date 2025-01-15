@@ -3,16 +3,20 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Documents/Books/ -mindepth 1 -maxdepth 3 -type f | fzf --delimiter / --with-nth=6..)
+    selected=$(find /mnt/Books/ -mindepth 1 -maxdepth 3 -type f | fzf --delimiter / --with-nth=4..)
 fi
 
 if [[ -z $selected ]]; then
     exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+extension="${selected##*.}"
 
-# zathura $selected
-okular $selected
-
+if [[ $extension == "pdf" ]]; then
+    okular $selected
+elif [[ $extension == "epub" ]]; then
+    foliate $selected
+else
+    echo "File type is currently not supported"
+    exit 1
+fi
