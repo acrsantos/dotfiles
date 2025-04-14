@@ -34,7 +34,7 @@ alias py="python"
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-export FZF_DEFAULT_OPTS='--height 100% --layout=reverse-list --border double'
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse-list --border sharp'
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 

@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-  background-color: rgba(17, 17, 17, 0.6);
+  background-color: rgba(14, 14, 14, 1);
   margin: 4px;
   padding: 0 2px;
   border-radius: 5px;
@@ -22,7 +22,7 @@ window#waybar.hidden {
   margin: 0 2px 0 2px;
   padding: 2px;
   border-radius: 5px;
-  background-color: rgba(17, 17, 17, 0);
+  background-color: rgba(14, 14, 14, 0);
 }
 
 #workspaces button {
@@ -33,7 +33,7 @@ window#waybar.hidden {
   margin: 2px;
   color: #ffffff;
   border-radius: 5px;
-  background-color: rgba(17, 17, 17, 0);
+  background-color: rgba(14, 14, 14, 0);
 }
 
 #workspaces button:hover {
@@ -82,8 +82,7 @@ window#waybar.hidden {
 #window {
   margin: 0 2px;
   padding: 4px 10px;
-  background-color: #111111;
-  background-color: rgba(17, 17, 17, 0);
+  background-color: rgba(14, 14, 14, 0);
   color: #ffffff;
   border-radius: 5px;
 }
@@ -118,7 +117,7 @@ tooltip label {
 #clock {
   margin: 0 2px;
   padding: 2px 4px;
-  background-color: rgba(17, 17, 17, 0);
+  background-color: rgba(14, 14, 14, 0);
   color: #ffffff;
   border-radius: 5px;
   font-weight: bold;

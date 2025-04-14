@@ -2,7 +2,7 @@
 
 dir=$(fd --max-depth 1 --type d -E '{build,src,.cache,.git,.github}' . "$HOME/dev")
 dir+="\n"$(cat "$HOME/.tmux-dir")
-selected=$(echo $dir | fzf --delimiter / --with-nth=4.. --preview 'eza --long --tree --level=2 {}' | sed 's/\/$//')
+selected=$(echo $dir | fzf --delimiter / --with-nth=4.. --preview 'eza --tree --level=2 {}' | sed 's/\/$//')
 
 if [[ -z $selected ]]; then
     exit 0

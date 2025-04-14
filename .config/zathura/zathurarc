@@ -9,43 +9,43 @@ set statusbar-v-padding 0
 set scroll-step 100
 set adjust-open width
 
-#set recolor-reverse-video "true"
-#set recolor-keephue "true"
+# set recolor-reverse-video "true"
+set recolor-keephue "true"
 
-# Colors
+# Colors: #14161b
 set default-fg               "#CDD6F4"
-set default-bg               "#14161b"
+set default-bg               "#0E0E0E"
 
-set completion-bg            "#14161b"
+set completion-bg            "#0E0E0E"
 set completion-fg            "#CDD6F4"
 set completion-highlight-bg  "#575268"
 set completion-highlight-fg  "#CDD6F4"
-set completion-group-bg      "#14161b"
+set completion-group-bg      "#0E0E0E"
 set completion-group-fg      "#89B4FA"
 
 set statusbar-fg             "#CDD6F4"
-set statusbar-bg             "#14161b"
+set statusbar-bg             "#0E0E0E"
 
-set notification-bg          "#14161b"
+set notification-bg          "#0E0E0E"
 set notification-fg          "#CDD6F4"
-set notification-error-bg    "#14161b"
+set notification-error-bg    "#0E0E0E"
 set notification-error-fg    "#F38BA8"
-set notification-warning-bg  "#14161b"
+set notification-warning-bg  "#0E0E0E"
 set notification-warning-fg  "#FAE3B0"
 
 set inputbar-fg              "#CDD6F4"
-set inputbar-bg              "#14161b"
+set inputbar-bg              "#0E0E0E"
 
 set recolor                  "false"
-set recolor-lightcolor       "#14161b"
+set recolor-lightcolor       "#0E0E0E"
 set recolor-darkcolor        "#CDD6F4"
 
 set index-fg                 "#CDD6F4"
-set index-bg                 "#14161b"
+set index-bg                 "#0E0E0E"
 set index-active-fg          "#CDD6F4"
-set index-active-bg          "#14161b"
+set index-active-bg          "#0E0E0E"
 
-set render-loading-bg        "#14161b"
+set render-loading-bg        "#0E0E0E"
 set render-loading-fg        "#CDD6F4"
 
 set highlight-color          "#575268"
