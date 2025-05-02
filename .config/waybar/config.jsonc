@@ -2,26 +2,22 @@
     "layer": "top",
     "position": "top",
     "spacing": 2,
-    "margin": 3,
+    "margin": 0,
     "modules-left": [
-        "custom/arch",
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": [ ],
     "modules-right": [
         "tray",
         "cpu",
-        // "disk",
         "memory",
         "battery",
         "pulseaudio",
-        "custom/power"
+        "clock"
     ],
     "cpu": {
         "interval": 5,
-        "format": " {usage}%",
+        "format": "CPU: {usage}%",
         "max-length": 10
     },
     "disk": {
@@ -34,7 +30,7 @@
     },
     "memory": {
         "interval": 5,
-        "format": " {percentage}%",
+        "format": "RAM: {percentage}%",
         "max-length": 10,
         "tooltip": true,
         "tooltip-format": "RAM - {used:0.1f}GiB used"
@@ -50,27 +46,8 @@
             "5": []
         }
     },
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-right": "fullscreen",
-        "icon-theme": "WhiteSur",
-        "icon-size": 25,
-        "tooltip-format": "{title}"
-    },
     "tray": {
         "spacing": 10
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-icons": "󰀂",
-        "format-ethernet": "󰀂",
-        "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-        "tooltip-format-ethernet": "{icon} {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-        "tooltip-format-disconnected": "Disconnected",
-        "on-click": "~/.config/rofi/wifi/wifi.sh &",
-        "interval": 5,
-        "nospacing": 1
     },
     "wireplumber": {
         "format": "{icon}",
@@ -86,7 +63,7 @@
         "scroll-step": 1
     },
     "battery": {
-        "format": "{icon}  {capacity}%",
+        "format": "BAT: {capacity}%",
         "format-icons": {
             // "charging": [
             //     "󰢜",
@@ -118,8 +95,8 @@
         "tooltip": true
     },
     "pulseaudio": {
-        "format": "{icon} {volume}",
-        "format-muted": "󰝟",
+        "format": "VOL: {volume}",
+        "format-muted": "VOL:MUTE",
         "format-icons": {
             "default": [
                 "󰖀",
@@ -127,23 +104,14 @@
             ]
         },
         "tooltip": true,
-        //"tooltip-format": "Device: {desc}",
-        "tooltip-format": "Volume : {volume}%",
-        "on-click": "~/.config/waybar/scripts/volumecontrol.sh -o m",
-        "on-scroll-up": "~/.config/waybar/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "~/.config/waybar/scripts/volumecontrol.sh -o d"
-    },
-    "custom/power": {
-        "format": "󰤆",
-        "tooltip": false,
-        "on-click": "wlogout"
+        "tooltip-format": "Device: {desc}",
+        "on-click": "~/.local/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "~/.local/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "~/.local/scripts/volumecontrol.sh -o d"
     },
     "clock": {
         "format": "{:%I:%M %p}",
-        "format-alt": "{:%a %b %d}"
+        "format-alt": "{:%a %b %d}",
+        "tooltip": false
     }
-    // "clock": {
-    //     "format": "{:%I\n%M\n%p}",
-    //     "format-alt": "{:%a\n%b\n%d}"
-    // }
 }

@@ -7,9 +7,9 @@
 
 window#waybar {
   background-color: rgba(14, 14, 14, 1);
-  margin: 4px;
+  margin: 0px;
   padding: 0 2px;
-  border-radius: 5px;
+  border-radius: 0px;
   border: 0px
 }
 
@@ -18,31 +18,26 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  /* background-color: #111111; */
-  margin: 0 2px 0 2px;
+  margin: 0 2px;
   padding: 2px;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgba(14, 14, 14, 0);
 }
 
 #workspaces button {
   all: initial;
   min-width: 0;
-  box-shadow: inset 0 -3px transparent;
   padding: 4px 10px;
-  margin: 2px;
+  margin: 0px;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: rgba(14, 14, 14, 0);
 }
 
 #workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
   color: #0F0F0F;
   background-color: #ffffff;
-  box-shadow: 0 0 0 1px #3A3A3C;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #workspaces button.empty {
@@ -53,14 +48,13 @@ window#waybar.hidden {
   color: #0F0F0F;
   background-color: #ffffff;
   box-shadow: 0 0 0 1px #3A3A3C;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #workspaces button.urgent {
-  background-color: @color1;
+  background-color: #84C9F2;
   color: #0F0F0F;
-  box-shadow: 0 0 0 1px #3A3A3C;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #custom-arch {
@@ -68,7 +62,7 @@ window#waybar.hidden {
   padding: 4px 8px;
   background-color: #111111;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #custom-updates,
@@ -81,18 +75,18 @@ window#waybar.hidden {
 #tray,
 #window {
   margin: 0 2px;
-  padding: 4px 10px;
+  padding: 0px 10px;
   background-color: rgba(14, 14, 14, 0);
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #network,
 #custom-power {
   margin: 0 2px;
-  padding: 4px 15px 4px 5px;
+  padding: 0px 10;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 #battery.warning,
@@ -110,15 +104,15 @@ tooltip {
 }
 
 tooltip label {
-  padding: 4px;
+  padding: 0px 4px;
   color: #ffffff;
 }
 
 #clock {
-  margin: 0 2px;
-  padding: 2px 4px;
+  margin: 0 0px;
+  padding: 0px 12px;
   background-color: rgba(14, 14, 14, 0);
   color: #ffffff;
-  border-radius: 5px;
   font-weight: bold;
+  border-left: solid 1px white;
 }
