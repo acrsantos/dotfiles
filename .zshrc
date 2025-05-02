@@ -1,23 +1,20 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-# DISABLE_AUTO_TITLE="true"
-plugins=(git)
+# plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt
 # source $HOME/.local/scripts/prompt.zsh
-source /home/adrian/.local/scripts/transient-prompt.zsh
+# source /home/adrian/.local/scripts/transient-prompt.zsh
+
+export HISTFILE="$HOME/.zhistory"
+export HISTSIZE=10000
+export SAVEHIST=10000
 
 # Alias
+alias ls="eza"
 alias tms="tmux-sessionizer"
 alias prj=". project"
 alias lg="lazygit"
@@ -43,9 +40,6 @@ export MANPAGER='nvim +Man!'
 # Transient Prompt
 # zle -N zle-line-init
 
-# Zoxide
-# eval "$(zoxide init zsh)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# source $HOME/.local/scripts/completion.zsh
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"

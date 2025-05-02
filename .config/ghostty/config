@@ -1,13 +1,12 @@
 theme = NvimDark
 confirm-close-surface = false
-font-size = 14
+font-size = 13
 font-family = "BerkeleyMono Nerd Font"
 window-decoration = false
 window-padding-x = 0
 window-padding-y = 0
 
-adjust-cell-height = 5
+adjust-cell-height = 4
 
 keybind = ctrl+alt+shift+b=write_scrollback_file:open
 keybind = ctrl+shift+b=write_scrollback_file:paste
-

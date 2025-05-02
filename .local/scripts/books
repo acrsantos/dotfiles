@@ -13,7 +13,7 @@ fi
 extension="${selected##*.}"
 
 if [[ $extension == "pdf" ]]; then
-    okular $selected
+    zathura $selected
 elif [[ $extension == "epub" ]]; then
     foliate $selected
 else
