@@ -81,6 +81,7 @@ jetbrains-toolbox
 kanshi
 kate
 kdenlive
+keyd
 kitty
 kolourpaint
 konsole

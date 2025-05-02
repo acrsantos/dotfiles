@@ -1,3 +1,0 @@
-- JOB: intercept -g $DEVNODE | interception-vimproved /etc/interception-vimproved/config.yaml | uinput -d $DEVNODE
-  DEVICE:
-    NAME: ".*((k|K)(eyboard|EYBOARD)|TADA68).*"
