@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-
-COLOR=$(xcolor)
-echo "$COLOR" | xclip -sel clip
-dunstify "$COLOR"
