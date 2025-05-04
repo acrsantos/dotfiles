@@ -1,8 +1,5 @@
-# Oh-my-zsh
 export ZSH="$HOME/.oh-my-zsh"
-# ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-# plugins=(git)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Prompt
@@ -40,6 +37,23 @@ export MANPAGER='nvim +Man!'
 # Transient Prompt
 # zle -N zle-line-init
 
-# source $HOME/.local/scripts/completion.zsh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+bindkey -s '^o' 'y\n'  # zsh
+tmux() {
+    if [ "$#" -eq 0 ]; then
+        session_name=$(basename "$PWD")
+        command tmux new -s "$session_name"
+    else
+        command tmux "$@"
+    fi
+}
