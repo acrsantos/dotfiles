@@ -48,14 +48,14 @@ style = "bold dimmed yellow"
 format = '◷[$duration]($style) '
 
 [git_branch]
-format = "[$symbol$branch(:$remote_branch)](bold yellow) "
+format = "[$symbol$branch(:$remote_branch)](bold yellow)"
 
 [git_status]
-format ="([$all_status$ahead_behind](bold bright-blue) )"
+format ="([ $all_status$ahead_behind](bold bright-blue))"
 
 [git_metrics]
 disabled = false
-format = "([+$added]($added_style) )([-$deleted]($deleted_style))"
+format = "( | [+$added]($added_style) )([-$deleted]($deleted_style))"
 
 [shell]
 fish_indicator =       '󰈺'
