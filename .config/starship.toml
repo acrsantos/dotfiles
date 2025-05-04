@@ -27,7 +27,7 @@ show_always = true
 
 [nix_shell]
 symbol = '❄️'
-format = '[$symbol $name](bold purple)'
+format = '[$symbol $name](bold cyan)'
 
 [hostname]
 ssh_only = false
@@ -52,11 +52,10 @@ format = "[$symbol$branch(:$remote_branch)](bold yellow) "
 
 [git_status]
 format ="([$all_status$ahead_behind](bold bright-blue) )"
-up_to_date = "up"
 
 [git_metrics]
 disabled = false
-format = "| ([+$added]($added_style) )([-$deleted]($deleted_style))"
+format = "([+$added]($added_style) )([-$deleted]($deleted_style))"
 
 [shell]
 fish_indicator =       '󰈺'
