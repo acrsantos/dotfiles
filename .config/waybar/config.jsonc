@@ -11,8 +11,8 @@
         "tray",
         "cpu",
         "memory",
-        "battery",
         "pulseaudio",
+        "battery",
         "clock"
     ],
     "cpu": {

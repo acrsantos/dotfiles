@@ -2,16 +2,11 @@ export ZSH="$HOME/.oh-my-zsh"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
-# Prompt
-# source $HOME/.local/scripts/prompt.zsh
-# source /home/adrian/.local/scripts/transient-prompt.zsh
-
 export HISTFILE="$HOME/.zhistory"
 export HISTSIZE=10000
 export SAVEHIST=10000
 
 # Alias
-alias ls="eza"
 alias tms="tmux-sessionizer"
 alias prj=". project"
 alias lg="lazygit"
@@ -33,9 +28,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --e
 export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 
 export MANPAGER='nvim +Man!'
-
-# Transient Prompt
-# zle -N zle-line-init
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"

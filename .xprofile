@@ -1,4 +1,0 @@
-# xrandr --output eDP-1 --mode 1920x1080 --rate 60.20
-xrandr --output eDP --mode 1920x1080 --rate 60.20
-xset -b
-
