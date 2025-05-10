@@ -105,9 +105,9 @@
         },
         "tooltip": true,
         "tooltip-format": "Device: {desc}",
-        "on-click": "~/.local/scripts/volumecontrol.sh -o m",
-        "on-scroll-up": "~/.local/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "~/.local/scripts/volumecontrol.sh -o d"
+        "on-click": "~/.local/scripts/wp-volume.sh toggle-mute",
+        "on-scroll-up": "~/.local/scripts/wp-volume.sh 0.02+",
+        "on-scroll-down": "~/.local/scripts/wp-volume.sh 0.02-"
     },
     "clock": {
         "format": "{:%I:%M %p}",

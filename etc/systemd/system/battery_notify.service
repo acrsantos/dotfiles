@@ -1,0 +1,9 @@
+[Unit]
+Description=Battery Optimization Notification
+
+[Service]
+Type=oneshot
+ExecStart=/home/adrian/.local/scripts/battery_notify.sh
+User=adrian
+Environment=DISPLAY=:1
+Environment=XDG_RUNTIME_DIR=/run/user/1000

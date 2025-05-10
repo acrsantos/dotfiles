@@ -30,14 +30,14 @@ window#waybar.hidden {
   padding: 4px 10px;
   margin: 0px;
   color: #ffffff;
-  border-radius: 3px;
+  border-radius: 0px;
   background-color: rgba(14, 14, 14, 0);
 }
 
 #workspaces button:hover {
   color: #0F0F0F;
   background-color: #ffffff;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #workspaces button.empty {
@@ -48,21 +48,13 @@ window#waybar.hidden {
   color: #0F0F0F;
   background-color: #ffffff;
   box-shadow: 0 0 0 1px #3A3A3C;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #workspaces button.urgent {
   background-color: #84C9F2;
   color: #0F0F0F;
-  border-radius: 3px;
-}
-
-#custom-arch {
-  margin: 0 2px 0 0;
-  padding: 4px 8px;
-  background-color: #111111;
-  color: #ffffff;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #custom-updates,
@@ -78,15 +70,15 @@ window#waybar.hidden {
   padding: 0px 10px;
   background-color: rgba(14, 14, 14, 0);
   color: #ffffff;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #network,
 #custom-power {
   margin: 0 2px;
-  padding: 0px 10;
+  padding: 0px 10px;
   color: #ffffff;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #battery.warning,

@@ -1,64 +1,59 @@
 [global]
+    font = "BerkeleyMono Nerd Font 10"
     follow = mouse
     indicate_hidden = yes
+    width = 350
+    height = (0, 300)
+    origin = top-right
+    offset = (35, 35)
+    notification_limit = 5
+    gap_size = 12
+    padding = 12
+    horizontal_padding = 20
+    frame_width = 2
+    sort = no
+    corner_radius = 5
 
-    offset = 8x24
+    progress_bar_frame_width = 0
+    progress_bar_corner_radius = 3
 
-    notification_height = 0
+    foreground = "#cdd1dc"
+    frame_color = "#2d303c"
+    highlight = "#2274d5, #82aad9"
 
-    separator_height = 2
-
-    padding = 15
-    horizontal_padding = 15
-    text_icon_padding = 0
-    frame_width = 3
-    transparency = 0
-
-    width = (400,500)
-
-    frame_color = "#84C9F2"
-    separator_color = frame
-
-    sort = yes
-    idle_threshold = 120
-    font = "BerkeleyMono Nerd Font 10"
-    line_height = 0
     markup = full
+    format = "<small>%a</small>\n<big><b>%s</b></big>\n%b"
     alignment = left
     vertical_alignment = center
-    show_age_threshold = 60
-    word_wrap = yes
-    stack_duplicates = true
+    show_age_threshold = -1
     hide_duplicate_count = false
 
-    show_indicators = yes
-
-    min_icon_size = 0
-    max_icon_size = 64
-
-    icon_path = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/actions/:/usr/share/icons/Papirus-Dark/16x16/animations/:/usr/share/icons/Papirus-Dark/16x16/apps/:/usr/share/icons/Papirus-Dark/16x16/categories/:/usr/share/icons/Papirus-Dark/16x16/emblems/:/usr/share/icons/Papirus-Dark/16x16/emotes/:/usr/share/icons/Papirus-Dark/16x16/devices/mimetypes:/usr/share/icons/Papirus-Dark/16x16/panel/:/usr/share/icons/Papirus-Dark/16x16/places/
+    icon_position = left
+    min_icon_size = 54
+    max_icon_size = 80
+    icon_corner_radius = 4
+    icon_path = /usr/share/icons/breeze-dark/actions/32/:/usr/share/icons/breeze-dark/status/32/:/usr/share/icons/breeze-dark/animations/32/:/usr/share/icons/breeze-dark/applets/32/:/usr/share/icons/breeze-dark/apps/32/:/usr/share/icons/breeze-dark/categories/32/:/usr/share/icons/breeze-dark/devices/32/:/usr/share/icons/breeze-dark/mimetypes/32/:/usr/share/icons/breeze-dark/emblems/32/:/usr/share/icons/breeze-dark/emotes/32/:/usr/share/icons/breeze-dark/actions/24/:/usr/share/icons/breeze-dark/status/24/:/usr/share/icons/breeze-dark/animations/24/:/usr/share/icons/breeze-dark/applets/24/:/usr/share/icons/breeze-dark/apps/24/:/usr/share/icons/breeze-dark/categories/24/:/usr/share/icons/breeze-dark/devices/24/:/usr/share/icons/breeze-dark/mimetypes/24/:/usr/share/icons/breeze-dark/emblems/24/:/usr/share/icons/breeze-dark/emotes/24/
 
     dmenu = /usr/bin/wofi -p dunst:
     browser = /usr/bin/firefox --new-tab
 
-    title = Dunst
-    class = Dunst
-
-    corner_radius = 4
-    timeout = 5
-
 [urgency_low]
     background = "#0F1417"
-    foreground = "#eeeeee"
-    transparency = 0
+    timeout = 3
 
 [urgency_normal]
     background = "#0F1417"
-    foreground = "#eeeeee"
-    transparency = 0
+    timeout = 8
 
 [urgency_critical]
     background = "#0F1417"
-    foreground = "#eeeeee"
-    frame_color = "#b7141e"
-    transparency = 0
+    #foreground = "#FF3333"
+    frame_color = "#FF3333"
+    timeout = 0
+
+[fullscreen_delay_everything]
+    fullscreen = delay
+
+[fullscreen_show_critical]
+    msg_urgency = critical
+    fullscreen = show

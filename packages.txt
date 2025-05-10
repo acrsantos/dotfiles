@@ -150,6 +150,7 @@ tokei
 tree
 udiskie
 unzip
+upower
 usbutils
 vde2
 vim
