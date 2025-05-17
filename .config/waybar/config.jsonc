@@ -1,12 +1,14 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "spacing": 2,
     "margin": 0,
     "modules-left": [
         "hyprland/workspaces"
     ],
-    "modules-center": [ ],
+    "modules-center": [
+        "hyprland/window"
+    ],
     "modules-right": [
         "tray",
         "cpu",
@@ -113,5 +115,12 @@
         "format": "{:%I:%M %p}",
         "format-alt": "{:%a %b %d}",
         "tooltip": false
-    }
+    },
+    "hyprland/window": {
+        "max-length": 60,
+        "rewrite": {
+            "(.*) - Firefox": "$1"
+        },
+        "separate-outputs": true
+    },
 }

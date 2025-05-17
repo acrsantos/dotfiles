@@ -4,6 +4,7 @@ userChrome.css
 README.md
 .config/rofi/bin/*
 packages.txt
+packages-essentials.txt
 mozilla
 wallpapers
 kde-key-shortcuts.kksrc
