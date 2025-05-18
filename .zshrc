@@ -7,12 +7,8 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 # Alias
-alias tms="tmux-sessionizer"
-alias prj=". project"
 alias lg="lazygit"
 alias bks=". books"
-alias cfg="cd ~/dotfiles/ && nvim ."
-alias gco="git switch \$(git branch -a | fzf)"
 alias vim="nvim"
 alias ta="tmux-attach"
 alias tta="tmux-dir add"
@@ -41,6 +37,7 @@ function y() {
     rm -f -- "$tmp"
 }
 bindkey -s '^o' 'y\n'  # zsh
+bindkey -s '^e' 'dev-dir.sh\n'  # zsh
 tmux() {
     if [ "$#" -eq 0 ]; then
         session_name=$(basename "$PWD")

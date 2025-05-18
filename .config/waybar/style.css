@@ -3,10 +3,11 @@
   min-height: 0;
   font-family: BerkeleyMono Nerd Font;
   font-size: 12px;
+  font-weight: bold;
 }
 
 window#waybar {
-  background-color: rgba(14, 14, 14, 0);
+  background-color: rgba(14, 20, 25, 0.8);
   margin: 0px;
   padding: 0 2px;
   border-radius: 0px;
@@ -21,7 +22,7 @@ window#waybar.hidden {
   margin: 0 2px;
   padding: 2px;
   border-radius: 3px;
-  background-color: rgba(14, 14, 14, 0);
+  background-color: rgba(14, 20, 25, 0.8);
 }
 
 #workspaces button {
@@ -31,7 +32,17 @@ window#waybar.hidden {
   margin: 0px;
   color: #ffffff;
   border-radius: 10px;
-  background-color: rgba(14, 14, 14, 0);
+  background-color: rgba(14, 20, 25, 0.8);
+  transition: all 0.15s linear;
+}
+
+#workspaces button.active {
+  color: #0F0F0F;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 1px #3A3A3C;
+  border-radius: 10px;
+  padding: 4px 20px;
+  transition: all 0.15s linear;
 }
 
 #workspaces button:hover {
@@ -43,14 +54,6 @@ window#waybar.hidden {
 #workspaces button.empty {
   color: #4a4a4a;
 }
-
-#workspaces button.active {
-  color: #0F0F0F;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 1px #3A3A3C;
-  border-radius: 10px;
-}
-
 #workspaces button.urgent {
   background-color: #84C9F2;
   color: #0F0F0F;
@@ -68,9 +71,14 @@ window#waybar.hidden {
 #window {
   margin: 0 2px;
   padding: 0px 10px;
-  background-color: rgba(14, 14, 14, 0);
+  background-color: rgba(14, 20, 25, 0);
   color: #ffffff;
   border-radius: 0px;
+  border-bottom: 1px solid white;
+}
+
+#window {
+    border: none;
 }
 
 #network,
@@ -103,8 +111,9 @@ tooltip label {
 #clock {
   margin: 0 0px;
   padding: 0px 12px;
-  background-color: rgba(14, 14, 14, 0);
+  background-color: rgba(14, 20, 25, 0.8);
   color: #ffffff;
   font-weight: bold;
-  border-left: solid 1px white;
+  /* border-left: solid 1px white; */
+  border-bottom: solid 1px white;
 }

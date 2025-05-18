@@ -10,13 +10,17 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser";
-    show-icons:                 true;
+    show-icons:                 false;
     display-drun:               "";
     display-run:                "";
     display-filebrowser:        "";
     display-window:             "";
-	drun-display-format:        "{name}";
-	window-format:              "{w} · {c} · {t}";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    kb-element-next: "";
+    kb-element-prev: "";
+    kb-mode-next: "Tab";
+    kb-mode-previous: "ISO_Left_Tab";
 }
 
 /*****----- Global Properties -----*****/
@@ -52,7 +56,7 @@ configuration {
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
+    // transparency:                "real";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
