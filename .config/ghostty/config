@@ -1,15 +1,26 @@
-theme = ayu
+theme = NvimLightCustom
 confirm-close-surface = false
 font-size = 13
 font-family = "Berkeley Mono"
-font-style = Bold
+# font-style = Bold
 window-decoration = false
 window-padding-x = 0
 window-padding-y = 0
 
-background-opacity = 0.8
+background-opacity = 1.0
 
 adjust-cell-height = 4
 
 keybind = ctrl+alt+shift+b=write_scrollback_file:open
 keybind = ctrl+shift+b=write_scrollback_file:paste
+
+keybind = alt+one=unbind
+keybind = alt+two=unbind
+keybind = alt+three=unbind
+keybind = alt+four=unbind
+keybind = alt+five=unbind
+keybind = alt+six=unbind
+keybind = alt+seven=unbind
+keybind = alt+eight=unbind
+keybind = alt+nine=unbind
+

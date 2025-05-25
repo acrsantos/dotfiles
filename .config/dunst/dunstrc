@@ -43,13 +43,13 @@
 
 [urgency_normal]
     background = "#0F1417"
-    timeout = 8
+    timeout = 5
 
 [urgency_critical]
     background = "#0F1417"
     #foreground = "#FF3333"
     frame_color = "#FF3333"
-    timeout = 0
+    timeout = 5
 
 [fullscreen_delay_everything]
     fullscreen = delay

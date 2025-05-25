@@ -40,7 +40,7 @@ truncation_length = 3
 truncation_symbol = '…/'
 truncate_to_repo = true
 style = 'bold white'
-format = '[$path]($style)[$read_only]($read_only_style)'
+format = '[$path](bold blue)[$read_only]($read_only_style)'
 
 [cmd_duration]
 min_time = 1_000

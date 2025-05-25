@@ -10,6 +10,7 @@ export SAVEHIST=10000
 alias lg="lazygit"
 alias bks=". books"
 alias vim="nvim"
+alias pvim="NVIM_APPNAME=nvim-personal nvim"
 alias ta="tmux-attach"
 alias tta="tmux-dir add"
 alias ttr="tmux-dir remove"
@@ -36,8 +37,6 @@ function y() {
     fi
     rm -f -- "$tmp"
 }
-bindkey -s '^o' 'y\n'  # zsh
-bindkey -s '^e' 'dev-dir.sh\n'  # zsh
 tmux() {
     if [ "$#" -eq 0 ]; then
         session_name=$(basename "$PWD")
@@ -46,3 +45,5 @@ tmux() {
         command tmux "$@"
     fi
 }
+bindkey -s '^o' 'y\n'  # zsh
+bindkey -s '^e' 'dev-dir.sh\n'  # zsh
