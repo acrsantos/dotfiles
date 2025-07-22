@@ -1,3 +1,4 @@
+7zip
 acpi
 adw-gtk-theme
 amd-ucode
@@ -12,6 +13,7 @@ base
 base-devel
 bat
 bind
+bluez-utils
 breeze
 breeze5
 brightnessctl
@@ -95,6 +97,7 @@ nodejs
 noise-suppression-for-voice
 noto-fonts
 noto-fonts-cjk
+noto-fonts-emoji
 npm
 ntfs-3g
 ntp

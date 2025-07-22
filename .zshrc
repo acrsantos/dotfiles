@@ -8,8 +8,11 @@ export SAVEHIST=10000
 
 # Alias
 alias lg="lazygit"
+alias nv="neovide"
 alias bks=". books"
+# alias vim="nvim"
 alias vim="nvim"
+alias nota="NVIM_APPNAME=nvim-nota neovide"
 alias pvim="NVIM_APPNAME=nvim-personal nvim"
 alias ta="tmux-attach"
 alias tta="tmux-dir add"
@@ -47,3 +50,11 @@ tmux() {
 }
 bindkey -s '^o' 'y\n'  # zsh
 bindkey -s '^e' 'dev-dir.sh\n'  # zsh
+bindkey -s '^g' 'tmux\n'  # zsh
+
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+  --color=fg:-1,fg+:#f7f7f8,bg:-1,bg+:#262626
+  --color=hl:#035e7b,hl+:#10a793,info:#36a3d9,marker:#96df71
+  --color=prompt:#36a3d9,spinner:#f29c14,pointer:#10a793,header:#87afaf
+  --color=border:#f7f7f8,label:#aeaeae,query:#d9d9d9
+  --layout="reverse"'

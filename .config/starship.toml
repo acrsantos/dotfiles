@@ -1,7 +1,9 @@
 add_newline = false
-
 format = '''╭──\([$username@](bold cyan)[$hostname](bold blue)\)-\[$directory(\]-\[$git_branch$git_status$git_metrics)\]
 ╰─[$character](bold red) '''
+
+# format = '''\[[$username@](bold cyan)[$hostname](bold blue)\]-\[$directory(\]-\[$git_branch$git_status$git_metrics)\]
+# [$character](bold red) '''
 
 right_format = '$cmd_duration$status'
 
